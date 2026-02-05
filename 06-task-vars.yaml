@@ -1,13 +1,13 @@
 - name: play level variables
   hosts: local
   connection: local
-  vars:
+  vars: # This is Global access
     COURSE: DevOps with AWS
     DURATION: 10HR
     STUDENT: Prudhvi Sai
   tasks:
   - name: print course information
-    vars:
+    vars: # This is local access
       COURSE: Ansible
     ansible.builtin.debug:
       msg: "Hello {{ COURSE }}, Course duration is {{ DURATION }}, Student is {{ STUDENT }}"
