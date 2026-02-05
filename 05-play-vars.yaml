@@ -9,9 +9,9 @@
   - name: print course information
     ansible.builtin.debug:
     # vars refernce should be surrounded by ""
-      msg: "Hello {{ COURSE }}, Course duration is {{ DURATION }}, Student is {{ STUDENT }}"
+      msg: "Hello {{ COURSE }}, Course duration is {{ DURATION }}, Student is {{ STUDENT }}""
 
-  - name: print course information again
+  - name: print course information
     ansible.builtin.debug:
     # vars refernce should be surrounded by ""
-      msg: "Hello {{ COURSE }}, Course duration is {{ DURATION }}, Student is {{ STUDENT }}"
+      msg: "Hello {{ COURSE }}, Course duration is {{ DURATION }}, Student is {{ STUDENT }}""
