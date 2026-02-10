@@ -44,3 +44,8 @@
     ansible.builtin.debug:
       msg: "Hello {{ name | lower }}"
 
+  - name: check IP address is valid or noquota
+    vars:
+      ip: "198.189.225.234"
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utils.ipaddr }}"
