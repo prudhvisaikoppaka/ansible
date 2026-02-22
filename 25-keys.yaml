@@ -3,8 +3,8 @@
   tasks: # list of tasks
   - name: install nginx
     ansible.builtin.dnf:
-    name: nginx
-    state: installed
+      name: nginx
+      state: installed
 
   - name: run nginx
     ansible.builtin.service:
