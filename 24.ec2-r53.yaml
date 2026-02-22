@@ -8,6 +8,7 @@
     - frontend
     subnet_id: subnet-0cce729715eaa8767
     sg_id: sg-01431a141b5a82d24
+    zone: prudhvisai.space
   tasks:
   - name: create ec2
     amazon.aws.ec2_instance:
@@ -25,7 +26,7 @@
     ansible.builtin.debug:
       msg: "{{ ec2_output }}"
 
-  - name: create r53 record
+  - name: create r53 records
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
