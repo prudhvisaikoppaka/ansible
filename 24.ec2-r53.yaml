@@ -33,7 +33,7 @@
       record: "{{ item.item }}.{{ zone }}"
       type: A
       ttl: 1
-      value: "{{ item.instances[0].private_ip_address }}"
+      value: "{{ item.instances[0].private_ip_address }}" # we have to give public_ip_adress for frontend server
       wait: true
       overwrite: true
     loop: "{{ ec2_output.results }}"
